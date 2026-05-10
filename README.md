@@ -67,7 +67,7 @@
 
 공격 액션이 실행되고 일정시간 내에 연결된 공격유형에 해당하는 입력이 들어오면 다음 공격이 실행되는 방식입니다.
 
-### [`UAction`](.\Source\ARPG_Hunter\Data\Action.h)
+### [`UAction`](./Source/ARPG_Hunter/Data/Action.h)
 ![img](./ReadMe/Img/01readme_Action1.png)
 
 액션을 모듈화한 `DataAsset`입니다.<br>
@@ -88,7 +88,7 @@
 `UAction`에 원하는 시점에 `UEffectData`를 할당하여 효과를 적용할 수 있습니다.<br>
 액션에서 효과를 적용하는 시점을 설정해두고 각각의 시점에서 할당한 효과를 적용시킵니다.
 
-### [`UActionComboData`](.\Source\ARPG_Hunter\Data\ActionComboData.h)
+### [`UActionComboData`](./Source/ARPG_Hunter/Data/ActionComboData.h)
 캐릭터가 사용하는 `UAction`간의 연계에 대한 정보를 담은 데이터 에셋입니다.<br>
 `UAction`간의 연결은 인접리스트를 이용한 그래프로 구현했습니다.
 
