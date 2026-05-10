@@ -7,11 +7,11 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "NiagaraFunctionLibrary.h"
 
-#include "Core/Subsystem/DataManager.h"
-#include "Core/GameMode/CombatGameMode.h"
-#include "Controller/MonsterAIController.h"
-#include "Component/StatComponent.h"
-#include "Component/ActionComponent/MonsterActionComponent.h"
+#include "Core/Subsystem/DataManager/DataManager.h"
+#include "Core/GameMode/Combat/CombatGameMode.h"
+#include "Controller/Monster/MonsterAIController.h"
+#include "Component/Stat/StatComponent.h"
+#include "Component/Action/Monster/MonsterActionComponent.h"
 
 #include "Data/MonsterData.h"
 #include "Data/MonsterConfig.h"

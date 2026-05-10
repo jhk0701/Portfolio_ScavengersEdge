@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿// Fill out your copyright notice in the Description page of Project Settings.
 
 #include "UI/UserWidget/UWEquipmentProduct.h"
 #include "Components/TextBlock.h"
@@ -9,9 +9,9 @@
 #include "Components/Border.h"
 
 #include "Define/Enum.h"
-#include "Core/Subsystem/DataManager.h"
-#include "Core/Subsystem/PlayerManager.h"
-#include "Player/Inventory.h"
+#include "Core/Subsystem/DataManager/DataManager.h"
+#include "Core/Subsystem/PlayerManager/PlayerManager.h"
+#include "Player/Inventory/Inventory.h"
 #include "Item/Item.h"
 #include "Data/ItemData.h"
 #include "Data/ItemProductData.h"
