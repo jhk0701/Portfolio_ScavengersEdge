@@ -22,7 +22,7 @@
     1. [스탯과 효과](#스탯과-효과)
     1. [아이템](#아이템)
 
-<br><br>
+<br>
 
 # 1. 프로젝트 개요
 [![Video](https://img.youtube.com/vi/VsqcLUelLSU/0.jpg)](https://www.youtube.com/watch?v=VsqcLUelLSU)
@@ -247,7 +247,7 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
 
 ### 기믹 수행
 보스 몬스터는 기믹을 수행할 수 있도록 구현했습니다.<br>
-공격 몽타주에 GimicNotify를 설정하여 특정한 종류의 기믹을 수행할 수 있습니다.<br>
+공격 몽타주에 `GimicNotify`를 설정하여 특정한 종류의 기믹을 수행할 수 있습니다.<br>
 각 기믹 액션을 파훼하면 보스 몬스터는 일시적으로 그로기 상태가 됩니다.
 
 #### 기믹 액션 종류
@@ -304,7 +304,7 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
     * 아이템, 스킬 액션에서 효과 적용을 위해 Data Asset을 활용했습니다.
 * 특징 : 
     * 코드 수정 없이 에디터를 통해 새로운 효과 생성 및 수정이 가능합니다.<br>
-    * 생성한 효과 Data Asset을 아이템, 액션에 할당하여 조립하듯 구성할 수 있습니다.
+    * 생성한 효과 `DataAsset`을 아이템, 액션에 할당하여 조립하듯 구성할 수 있습니다.
 
 ### [`UStatComponent`](./Source/ARPG_Hunter/Component/Stat/)
 ![img](./ReadMe/Img/06readme_Stat.png)
