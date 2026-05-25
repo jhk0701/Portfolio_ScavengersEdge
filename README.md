@@ -55,6 +55,7 @@
 캐릭터의 여러 동작을 하나의 액션으로 모듈화하여 액션과 이어진 액션을 연계하는 기능을 구현했습니다.
 
 ![img](./ReadMe/Img/01readme_Action6.png)
+
 액션 실행에 필요한 스태미너 소모 로직은 `UStatComponent`에 직접적인 참조를 피하기 위해 델리게이트로 처리했습니다.<br>
 `APlayerCharacter`에서 `UStatComponent`의 `TryUseStamina()`를 바인딩 해주었고<br>
 액션 실행 전 델리게이트를 호출하여 사용 가능 여부를 확인하는 구조입니다.
@@ -202,6 +203,7 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
 `UAISense`를 상속하여 [`UAISense_PlayerAction`](./Source/ARPG_Hunter/AI/Sense/)을 만들었습니다.
 
 ![img](./ReadMe/Img/03readme_Monster5.png)
+
 일반 몬스터는 플레이어의 공격을 감지하면 확률적으로 회피 모션을 수행합니다.<br>
 보스 몬스터는 플레이어의 아이템 사용을 감지하면 확률적으로 원거리 견제 패턴을 수행합니다.
 
@@ -252,12 +254,12 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
 
 #### 기믹 액션 종류
 * 카운터 : <br>
-![gif](./ReadMe/Gif/04readme_Monster2.gif)
+![gif](./ReadMe/Gif/04readme_Monster2.gif)<br>
 보스가 정면으로 이동하며 공격합니다. <br>
 보스 정면 (보스 기준 120도 이내 방향)에서 스매시, 스킬 공격 시 파훼 가능합니다.
 
 * 무력화 : <br>
-![gif](./ReadMe/Gif/04readme_Monster3.gif)
+![gif](./ReadMe/Gif/04readme_Monster3.gif)<br>
 보스가 일정 시간 동안 무력화 가능 상태가 됩니다. <br>
 무력화 게이지를 0으로 만들지 못하면 일정 시간 후 매우 강력한 공격을 실행합니다.
 
@@ -308,6 +310,7 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
 
 ### [`UStatComponent`](./Source/ARPG_Hunter/Component/Stat/)
 ![img](./ReadMe/Img/06readme_Stat.png)
+
 캐릭터의 체력, 스태미너, 공격력 같은 스탯을 관리하는 액터 컴포넌트입니다.<br>
 캐릭터가 가진 기본 스탯뿐만 아니라 장비와 효과로 얻은 스탯도 반영할 수 있습니다.
 체력, 스태미너, 스킬 게이지는 자원 요소로 처리합니다.<br>자원 요소들은 값 변동과 고갈 시, 이벤트를 발행하여 UI 연동하는 등의 용도로 사용했습니다.
@@ -320,6 +323,7 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
 
 ### [`UEffect`](./Source/ARPG_Hunter/Effect/)
 ![img](./ReadMe/Img/06readme_Effect.png)
+
 버프, 디버프를 적용하는 효과 클래스입니다.<br>
 효과 기능들이 스탯에 영향을 준다는 공통점에 착안하여<br>
 `UStatComponent`에서 모든 효과를 등록, 해제하고 관리하도록 구현했습니다.
@@ -328,7 +332,7 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
 `IEffectHandler` 인터페이스를 만들어 `ApplyEffect()`를 구현하도록 했습니다.
 
 새로운 효과를 추가하기 쉽도록 다형성을 활용했습니다.<br>
-상위 클래스의 `Activate()`를 호출하면하위 클래스에서 재정의한 구체적인 효과가 실행되도록 구조를 잡았습니다.
+상위 클래스의 `Activate()`를 호출하면 하위 클래스에서 재정의한 구체적인 효과가 실행되도록 구조를 잡았습니다.
 
 * 주요 클래스
     * `UTermEffect` : 일정 기간 동안 유지되어 효과를 부여 (예, 10초 동안 적용)
@@ -337,6 +341,7 @@ BT를 통해서 입력된 공격 액션을 수행합니다.
     
 ### [`UEffectData`](./Source/ARPG_Hunter/Data/EffectData.h)
 ![img](./ReadMe/Img/06readme_Effect2.png)
+
 효과 값을 설정해두기 위한 데이터 에셋입니다.<br>
 설정해둔 데이터 에셋을 액션 에셋이나 아이템에 할당할 수 있습니다.
 
